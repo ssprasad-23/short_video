@@ -1,11 +1,14 @@
 import React from "react";
-import {View, Text} from "react-native";
+import {View} from "react-native";
+import Post from "../../components/Post";
+import { StatusBar } from "react-native";
 
 
 const Home = () => {
   return (
     <View>
-      <Text>Home world</Text>
+      <StatusBar hidden={true}/>
+      <Post/>
     </View>
   );
 }
