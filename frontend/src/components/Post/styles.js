@@ -17,11 +17,12 @@ const styles = StyleSheet.create({
     uiContainer: {
         height: "100%",
         justifyContent: "flex-end",
-        flexDirection: "row",
     },
     bottomContainer: {
-        padding : 30,
-        justifyContent: "flex-end"
+        padding : 32,
+        justifyContent: "flex-end",
+        alignItems: "flex-start",
+        paddingLeft: 15,
     },
     handle: {
         color: "rgb(155, 31, 31)",
@@ -50,19 +51,9 @@ const styles = StyleSheet.create({
         position: "absolute",
         justifyContent: "space-between",
         alignItems: "center",
-        height: "17%",
+        height: "18%",
         padding: 15,
-        bottom: 20,
-    },
-    profilePic: {
-        width: 30,
-        height: 30,
-        borderRadius: 20,
-        borderWidth: 1,
-        borderColor: "white",
-        bottom: 5,
-        right: 10,
-        paddingLeft: 40,
+        bottom: 30,
     },
     heart:{
         color: "red",
