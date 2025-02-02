@@ -51,12 +51,13 @@ const styles = StyleSheet.create({
         position: "absolute",
         justifyContent: "space-between",
         alignItems: "center",
-        height: "18%",
+        height: "20%",
         padding: 15,
         bottom: 30,
     },
     heart:{
-        color: "red",
+        // color: "white",
+    
     },
     profilePic: {
         width: 30,
