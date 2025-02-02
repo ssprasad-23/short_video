@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import {View, Text, Image} from "react-native";
+import {View, Text, Image, TouchableOpacity} from "react-native";
 import Video from "react-native-video";
 import styles from "./styles";
 import { TouchableWithoutFeedback } from "react-native";
@@ -9,13 +9,25 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 const Post = (props) => {
 
-  const{post} = props;
+  const [post, setPost] = useState(props.post);
+  const [isLiked, setIsLiked] = useState(false);
 
 
   const [paused, setPaused] = useState(false);
+
   const onPlayPausePress = () => {
     setPaused(!paused);
   }
+
+  const onLikePress = () => {
+    const likesToAdd = isLiked ? -1 : 1;
+    setPost({
+      ...post,
+      likes: post.likes + likesToAdd,
+    });
+    setIsLiked(!isLiked);
+  }
+
 
   return (
     <View style = {styles.container}>
@@ -35,9 +47,10 @@ const Post = (props) => {
 
       <View style = {styles.uiContainer}>
         <View style = {styles.rightContainer}>
-          <View>
-          <Entypo style = {styles.heart} name='heart' size={33}/>  
-          </View>
+          <TouchableOpacity onPress={onLikePress}>
+            <Entypo style = {styles.heart} name='heart' size={33} color={isLiked ? 'red' : 'white'}/>  
+            <Text style={{ color: 'white' }}> {post.likes}</Text>
+          </TouchableOpacity>
           <Image style = {styles.profilePic} source={{uri: post.user.imageUri}}/>
           <View>
             <Ionicons style = {styles.share} name='share-social-sharp' size={33}/>
