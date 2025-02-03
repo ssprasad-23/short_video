@@ -38,7 +38,7 @@ const Post = (props) => {
           // source = {{ uri: 'https://assets.mixkit.co/videos/1259/1259-720.mp4' }}
           // source = {{ uri: 'https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4' }}
           onError={(e) => console.log(e)}
-          resizeMode = 'contain'
+          resizeMode = 'cover'
           repeat = {true}
           paused = {paused}
         />
