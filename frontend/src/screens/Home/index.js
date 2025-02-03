@@ -1,5 +1,5 @@
 import React from "react";
-import {View, FlatList} from "react-native";
+import {View, FlatList, Dimensions} from "react-native";
 import Post from "../../components/Post";
 import { StatusBar } from "react-native";
 
@@ -13,7 +13,11 @@ const Home = () => {
       <StatusBar hidden={true}/>
       <FlatList
         data={posts}
-        renderItem={({item}) => <Post post={item} />}>
+        renderItem={({item}) => <Post post={item} />}
+        snapToInterval={Dimensions.get('window').height}
+        snapToAlignment="start"
+        decelerationRate={"fast"}
+      >
       </FlatList>
     </View>
   );
