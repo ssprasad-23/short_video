@@ -10,7 +10,7 @@ import posts from "../../data/posts";
 const Home = () => {
   return (
     <View>
-      <StatusBar hidden={true}/>
+      <StatusBar hidden={false}/>
       <FlatList
         data={posts}
         renderItem={({item}) => <Post post={item} />}
