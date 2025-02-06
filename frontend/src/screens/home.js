@@ -1,9 +1,9 @@
 import React from "react";
 import {View, FlatList, Dimensions} from "react-native";
-import Post from "../../components/Post";
+import Post from "../components/Post";
 import { StatusBar } from "react-native";
 
-import posts from "../../data/posts";
+import posts from "../data/posts";
 
 
 
