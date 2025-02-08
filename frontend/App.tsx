@@ -9,9 +9,9 @@ function App(): React.JSX.Element {
   return (
     <>
       <View>
-        {/* <Home/> */}
+        <Home/>
         {/* <LoginPage/> */}
-        <SignupPage/>
+        {/* <SignupPage/> */}
       </View>
     </>
   );

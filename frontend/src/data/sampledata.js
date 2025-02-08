@@ -3,12 +3,12 @@ export default [
         id: 'p1',
         user: {
           id: 'u1',
-          username: 'mom',
+          username: 'user1',
           imageUri: "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
       
         },
         description: 'Shynal Prasad Production description',
-        song: "momsong",
+        song: "user1song",
         likes: 100,
         share: 69,
         // videoUri: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
@@ -18,12 +18,12 @@ export default [
         id: 'p2',
         user: {
         id: 'u2',
-        username: 'dad',
+        username: 'user2',
         imageUri: "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
     
         },
         description: 'Shynal Prasad Production description',
-        song: "dadsong",
+        song: "user2song",
         likes: 200,
         share: 69,
         // videoUri: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
@@ -33,12 +33,12 @@ export default [
         id: 'p3',
         user: {
         id: 'u3',
-        username: 'shalvin',
+        username: 'user3',
         imageUri: "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
     
         },
         description: 'Shynal Prasad Production description',
-        song: "shalvin song",
+        song: "user3 song",
         likes: 300,
         share: 69,
         // videoUri: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
@@ -48,12 +48,12 @@ export default [
         id: 'p4',
         user: {
         id: 'u4',
-        username: 'shynal',
+        username: 'user4',
         imageUri: "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
     
         },
         description: 'Shynal Prasad Production description',
-        song: "shynal song",
+        song: "user4 song",
         likes: 400,
         share: 69,
         // videoUri: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",

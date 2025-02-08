@@ -3,7 +3,7 @@ import {View, FlatList, Dimensions} from "react-native";
 import Post from "../components/Post";
 import { StatusBar } from "react-native";
 
-import posts from "../data/posts";
+import posts from "../data/sampledata";
 
 
 
@@ -16,7 +16,7 @@ const Home = () => {
         renderItem={({item}) => <Post post={item} />}
         snapToInterval={Dimensions.get('window').height}
         snapToAlignment="start"
-        decelerationRate={"fast"}
+        decelerationRate="fast"
       >
       </FlatList>
     </View>
