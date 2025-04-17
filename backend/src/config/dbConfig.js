@@ -10,13 +10,13 @@ const db = sql.createConnection({
     database: process.env.DB_NAME,
 });
 
-//connect to the database
+// connect to the database
 db.connect((err) => {
     if (err){
-        console.error("Error connecting to database:", err);
+        console.error("Error connecting to SQL database:", err);
         return;
     }
     console.log("Connected to database.");
 });
 
-export default db;
+export default db.promise();

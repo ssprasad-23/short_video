@@ -4,6 +4,7 @@ import { expressMiddleware } from '@apollo/server/express4';
 import { typeDefs } from "./src/graphql/schemas.js";
 import { resolvers } from "./src/graphql/resolvers.js";
 import dotenv from "dotenv";
+// import db from "./src/config/dbConfig.js";
 
 const app = express();
 app.use(express.json());

@@ -29,7 +29,7 @@ export const typeDefs = `#graphql
         updatedAt: String
     },
     type Query {
-        getUser(id: ID!): User
-        getVideo(id: ID!): Video
+        getUser: [User!]!
+        getVideo: [Video]
     }
 `
