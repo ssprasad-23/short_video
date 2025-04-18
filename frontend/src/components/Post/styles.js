@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
     },
     bottomContainer: {
-        padding : 32,
+        padding : 15,
         justifyContent: "flex-end",
         alignItems: "flex-start",
         paddingLeft: 15,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         height: "20%",
         padding: 15,
-        bottom: 30,
+        bottom: 10,
     },
     heart:{
         // color: "white",
