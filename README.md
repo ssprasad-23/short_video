@@ -119,11 +119,4 @@ Shynal Prasad
 - LinkedIn: http://www.linkedin.com/in/shynal-prasad
 - Email: pshynal23@gmail.com
 
-## Looking For
-I am currently seeking opportunities as a:
-- Full-Stack Developer
-- React Native Developer
-- Mobile Application Developer
-- Frontend Developer
-
 I bring hands-on experience in building production-ready applications and a strong foundation in modern web technologies.
