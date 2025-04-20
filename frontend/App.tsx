@@ -1,21 +1,19 @@
+
 import React from 'react';
-import { SafeAreaView, StatusBar, View} from 'react-native';
-import Home from './src/screens/home';
 import LoginPage from './src/screens/loginPage';
 import SignupPage from './src/screens/signupPage';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+const Stack = createNativeStackNavigator();
 
-function App(): React.JSX.Element {  
+export default function App() {
   return (
-    <>
-      <View>
-        <Home/>
-        {/* <LoginPage/> */}
-        {/* <SignupPage/> */}
-      </View>
-    </>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="LoginPage" component={LoginPage}/>
+        <Stack.Screen name="SignupPage" component={SignupPage} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-
-export default App;
