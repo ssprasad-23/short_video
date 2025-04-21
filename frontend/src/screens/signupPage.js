@@ -60,7 +60,6 @@ const SignupPage = ({ navigation }) => {
               Create Account
             </Text>
 
-            {/* Username */}
             <TextInput
               className="w-full h-12 border border-gray-300 rounded-lg px-4 bg-white mb-4"
               placeholder="Username"
@@ -70,7 +69,6 @@ const SignupPage = ({ navigation }) => {
               keyboardAppearance="dark"
             />
 
-            {/* Password */}
             <TextInput
               className="w-full h-12 border border-gray-300 rounded-lg px-4 bg-white mb-4"
               placeholder="Password"
@@ -80,7 +78,6 @@ const SignupPage = ({ navigation }) => {
               onChangeText={setPassword}
             />
 
-            {/* Confirm Password */}
             <TextInput
               className="w-full h-12 border border-gray-300 rounded-lg px-4 bg-white mb-4"
               placeholder="Confirm Password"
@@ -90,7 +87,6 @@ const SignupPage = ({ navigation }) => {
               onChangeText={setConfirmPassword}
             />
 
-            {/* Date of Birth */}
             <TouchableOpacity
               className="w-full h-12 border border-gray-300 rounded-lg px-4 bg-white mb-4 justify-center"
               onPress={() => setOpenDobPicker(true)}
@@ -111,7 +107,6 @@ const SignupPage = ({ navigation }) => {
               onCancel={() => setOpenDobPicker(false)}
             />
 
-            {/* Country */}
             <TextInput
               className="w-full h-12 border border-gray-300 rounded-lg px-4 bg-white mb-6"
               placeholder="Country"
@@ -120,16 +115,14 @@ const SignupPage = ({ navigation }) => {
               onChangeText={setCountry}
             />
 
-            {/* Sign Up Button */}
             <TouchableOpacity
-              className="w-full h-12 bg-green-600 rounded-lg justify-center items-center mb-4"
+              className="w-full h-12 bg-green-600 rounded-3xl justify-center items-center mb-4"
               onPress={handleSignUp}
               activeOpacity={0.8}
             >
               <Text className="text-white text-lg font-semibold">Sign Up</Text>
             </TouchableOpacity>
 
-            {/* Login Redirect Text */}
             <View className="flex-row justify-center">
               <Text className="text-gray-600">
                 Already have an account?{' '}
@@ -144,7 +137,6 @@ const SignupPage = ({ navigation }) => {
     </SafeAreaView>
   );
 };
-
 
 
 export default SignupPage;

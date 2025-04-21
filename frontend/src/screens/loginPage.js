@@ -36,14 +36,15 @@ const LoginPage = ({navigation}) => {
           </Text>
 
           <TextInput
-            className="w-full h-12 border border-gray-300 rounded-lg px-20 bg-white mb-4"
+            className="w-full h-12 border border-gray-300 rounded-lg px-4 bg-white mb-4"
+    
             placeholder="Username"
             value={username}
             onChangeText={setUsername}
           />
 
           <TextInput
-            className="w-full h-12 border border-gray-300 rounded-lg px-20 bg-white mb-4"
+            className="w-full h-12 border border-gray-300 rounded-lg px-4 bg-white mb-4"
             placeholder="Password"
             secureTextEntry
             value={password}
