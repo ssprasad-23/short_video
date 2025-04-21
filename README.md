@@ -75,6 +75,8 @@ git clone https://github.com/ssprasad-23/short_video
 # Frontend
 cd frontend
 npm install
+cd IOS
+pod install
 
 # Backend
 cd ../backend
