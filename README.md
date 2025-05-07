@@ -120,5 +120,3 @@ npm run dev
 Shynal Prasad
 - LinkedIn: http://www.linkedin.com/in/shynal-prasad
 - Email: pshynal23@gmail.com
-
-I bring hands-on experience in building production-ready applications and a strong foundation in modern web technologies.
