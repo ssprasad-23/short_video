@@ -1,19 +1,21 @@
-import { Client } from 'pg';
-import dotenv from 'dotenv';
+import db from '../auth/src/config/config.js';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
 
-dotenv.config();
 
-const db = new Client({
-  host: process.env.DB_HOST,
-  database: process.env.DB_DATABASE,
-  port: process.env.DB_PORT || 5432
-});
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Connect to the database
 db.connect()
-    .then(() => {
+    .then(async () => {
         console.log("Connected to PostgreSQL");
+        // Read and execute the SQL file
+        const sqlFile = path.join(__dirname, 'src/db/userTable.sql');
+        const createTableSQL = fs.readFileSync(sqlFile, 'utf8');
+        await db.query(createTableSQL);
+        console.log("Table creation successful");
     })
     .catch(err => {
-        console.error("Error connecting to PostgreSQL:", err.stack);
+        console.error("Error:", err.stack);
     });
