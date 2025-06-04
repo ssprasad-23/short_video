@@ -12,8 +12,7 @@ This project demonstrates my ability to build a full-stack mobile application wi
 - 🔒 User authentication system
 - 🎥 Video playback and interaction features
 - 🎯 GraphQL API integration
-- 🗄️ MySQL database with proper schema design
-- 🔄 State management and data flow
+- 🗄️ Postgres database
 
 ## Technical Stack
 
