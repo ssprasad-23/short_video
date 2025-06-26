@@ -103,7 +103,7 @@ npm run ios
 npm run dev
 ```
 
-## Skills Demonstrated
+## What I learned
 - ✅ Full-stack mobile application development
 - ✅ Modern React Native practices
 - ✅ GraphQL API design and implementation
@@ -111,7 +111,7 @@ npm run dev
 - ✅ User interface design
 - ✅ State management
 - ✅ Authentication systems
-- ✅ Video streaming integration
+- ✅ Video player integration
 - ✅ Cross-platform development
 - ✅ Performance optimization
 
