@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native';
+import SignupPage from './signupPage';
 
 const LoginPage = ({navigation}) => {
   const [username, setUsername] = useState('');
@@ -14,18 +15,6 @@ const LoginPage = ({navigation}) => {
 
   const handleSignIn = () => {
     Alert.alert('Sign In', `Username: ${username}\nPassword: ${password}`);
-  };
-
-  const handleSignUp = () => {
-    try {
-      navigation.navigate('SignupPage');
-    } catch (error) {
-      console.error('Navigation error:', error.message);
-      Alert.alert(
-        'Error',
-        'Oops! Could not go to the SignUp screen. Please try again.',
-      );
-    }
   };
 
     return (
@@ -60,7 +49,7 @@ const LoginPage = ({navigation}) => {
 
           <TouchableOpacity
             className="w-full h-12 bg-green-600 rounded-3xl justify-center items-center mb-4"
-            onPress={handleSignUp}
+            onPress={() => navigation.navigate('SignupPage')}
             activeOpacity={0.8}>
             <Text className="text-white text-lg font-semibold">Sign Up</Text>
           </TouchableOpacity>
