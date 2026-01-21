@@ -6,14 +6,14 @@ A modern full-stack video sharing application built with React Native and GraphQ
 ## Project Overview
 This project demonstrates my ability to build a full-stack mobile application with:
 
-- 📱 React Native frontend for cross-platform mobile development
-- ⚛️ Modern React patterns and hooks
-- 🎨 Custom UI components and animations
-- 🔒 User authentication system
-- 🎥 Video playback and interaction features
-- 🎯 GraphQL API integration
-- 🗄️ MySQL database with proper schema design
-- 🔄 State management and data flow
+- React Native frontend for cross-platform mobile development
+- Modern React patterns and hooks
+- Custom UI components and animations
+- User authentication system
+- Video playback and interaction features
+- GraphQL API integration
+- MySQL database with proper schema design
+- State management and data flow
 
 ## Technical Stack
 
@@ -105,16 +105,16 @@ npm run dev
 ```
 
 ## Skills Demonstrated
-- ✅ Full-stack mobile application development
-- ✅ Modern React Native practices
-- ✅ GraphQL API design and implementation
-- ✅ Database modeling and management
-- ✅ User interface design
-- ✅ State management
-- ✅ Authentication systems
-- ✅ Video streaming integration
-- ✅ Cross-platform development
-- ✅ Performance optimization
+- Full-stack mobile application development
+- Modern React Native practices
+- GraphQL API design and implementation
+- Database modeling and management
+- User interface design
+- State management
+- Authentication systems
+- Video streaming integration
+- Cross-platform development
+- Performance optimization
 
 ## Contact
 Shynal Prasad
