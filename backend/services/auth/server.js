@@ -1,65 +1,52 @@
-import db from "../auth/src/config/config.js";
-import path from "path";
-import fs from "fs";
-import { fileURLToPath } from "url";
 import express from "express";
 import dotenv from "dotenv";
-import { ApolloServer } from "@apollo/server";
-import { typeDefs } from "../auth/src/graphql/schema.js";
-import { resolvers } from "../auth/src/graphql/resolver.js";
-import { expressMiddleware } from "@apollo/server/express4";
+import db from "./src/config/config.js";
+import initDb from "./src/db/init.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Middleweare
-app.use(express.json());
 dotenv.config();
+app.use(express.json());
 
-// Connect to DB and start express & graphql server
-db.connect()
-  .then(async () => {
-    console.log("Connected to PostgreSQL");
+// Routes
+app.post('/signup', async (req, res) => {
+  try {
+    const {username, email, password, dob, country} = req.body;
+    console.log(`Username: ${username}, Email: ${email}, Password: ${password}, DOB: ${dob}, Country: ${country}`);
+    res.status(200).send({message: "Signup successful" });
+  } catch (error) {
+    console.error('Signup error:', error);
+    res.status(500).send({message: "Signup failed", error: error.message});
+  }
+});
 
-    // Check if table exists first
-    const tableExists = await db.query(`
-        SELECT EXISTS (
-            SELECT FROM information_schema.tables 
-            WHERE table_schema = 'public' 
-            AND table_name = 'users'
-        );
-    `);
+app.post('/login', (req, res) => {
+  try {
+    const {email, password} = req.body;
+    console.log(`Email: ${email}, Password: ${password}`);
+    res.status(200).send({message: "Login successful" });
+  } catch (error) {
+    console.error('Login error:', error);
+    res.status(500).send({message: "Login failed", error: error.message});
+  }
+});
 
-    // Only create table if don't exist
-    if (!tableExists.rows[0].exists) {
-      const sqlFile = path.join(__dirname, "src/db/userTable.sql");
-      const createTableSQL = fs.readFileSync(sqlFile, "utf8");
-      await db.query(createTableSQL);
-      console.log("Table and trigger created successfully");
-    } else {
-      console.log("Table already exists, skipping creation");
-    }
-    // Define GraphQL schema and resolvers
-    const server = new ApolloServer({
-      typeDefs,
-      resolvers,
-    });
+// startup sequence
+(async () => {
+  try {
+    // Verify DB connectivity
+    await db.query("SELECT 1");
+    console.log("Database connected successfully");
 
-    //start apolo server
-    await server.start();
+    // Create tables if needed
+    await initDb();
 
-    // Apply middleware
-    app.use("/graphql", expressMiddleware(server));
-
-    // Start server after DB and graphQL
+    // Start server AFTER DB is ready
     app.listen(PORT, () => {
-      console.log(`Express server running at http://localhost:${PORT}/`);
-      console.log(`GraphQL endpoint at http://localhost:${PORT}/graphql`);
+      console.log(`Server running at http://localhost:${PORT}`);
     });
-  })
-  .catch((err) => {
-    console.error("Error:", err.stack);
+  } catch (err) {
+    console.error("Startup failed:", err);
     process.exit(1);
-  });
+  }
+})();
